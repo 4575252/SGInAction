@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--
+        SpringMVC 只扫描Controller包即可
+     -->
+    <!-- 组件扫描，排除controller -->
+    <context:component-scan base-package="com.iyyxx.controller" />
+
+    <!--解决静态资源访问问题，如果不加会导致无法访问到handler-->
+    <mvc:default-servlet-handler />
+
+    <!-- 解决响应乱码 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="utf-8" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- 配置视图解析器，前后端不分离项目使用 -->
+<!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="viewResolver">-->
+<!--        <property name="prefix" value="/WEB-INF/page"/>-->
+<!--        <property name="suffix" value=".jsp" />-->
+<!--    </bean>-->
+
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+<!--            <mvc:exclude-mapping path="/"/>-->
+            <bean class="com.iyyxx.interceptor.MyHandlerInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--
+        文件上传解析器
+        注意：id必须为 multipartResolver
+        如果需要上传文件可以放开相应配置
+    -->
+<!--    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">-->
+<!--        <property name="defaultEncoding" value="utf-8" />-->
+<!--        <property name="maxUploadSize" value="#{1024*1024*100}" /> &lt;!&ndash; 总的大小上限，单位字节 &ndash;&gt;-->
+<!--        <property name="maxUploadSizePerFile" value="#{1024*1024*50}" /> &lt;!&ndash; 单个文件上限50MB &ndash;&gt;-->
+<!--    </bean>-->
+</beans>
