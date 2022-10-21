@@ -2,7 +2,7 @@ package com.iyyxx.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.iyyxx.controller.User;
+import com.iyyxx.domain.User;
 import com.iyyxx.dao.UserDao;
 import com.iyyxx.domain.PageResult;
 import com.iyyxx.service.UserService;

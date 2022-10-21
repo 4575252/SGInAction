@@ -1,8 +1,7 @@
 package com.iyyxx.dao;
 
-import com.iyyxx.domain.User;
 
-import java.util.List;
+import com.iyyxx.domain.User;
 
 /**
  * @className: UserDao
@@ -19,11 +18,4 @@ public interface UserDao {
      */
     User findById(Integer id);
 
-    List<User> findAll();
-
-    void insertUser(User user);
-
-    void updateUser(User user);
-
-    void deleteById(Integer id);
 }

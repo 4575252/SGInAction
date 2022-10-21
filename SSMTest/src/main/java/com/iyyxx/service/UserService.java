@@ -1,6 +1,6 @@
 package com.iyyxx.service;
 
-import com.iyyxx.controller.User;
+import com.iyyxx.domain.User;
 import com.iyyxx.domain.PageResult;
 
 import java.util.List;

@@ -9,6 +9,4 @@
 学习清单如下：
 - SpringSecurity（在另一个工程中）
 - SSM框架整合
-- 
-
-# 学习步骤
+- Spring框架学习

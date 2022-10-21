@@ -2,6 +2,7 @@ package com.iyyxx.controller;
 
 import com.iyyxx.domain.PageResult;
 import com.iyyxx.domain.ResponseResult;
+import com.iyyxx.domain.User;
 import com.iyyxx.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
