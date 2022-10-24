@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @className: MyAspect
- * @description: TODO 类描述
+ * @description: aop切面类测试
  * @author: eric 4575252@gmail.com
  * @date: 2022/10/20/0020 10:04:29
  **/

@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * @className: TestService
- * @description: TODO 类描述
  * @author: eric 4575252@gmail.com
  * @date: 2022/10/20/0020 13:48:01
  **/

@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @className: PageResult
- * @description: TODO 类描述
+ * @description: 分页类返回格式
  * @author: eric 4575252@gmail.com
  * @date: 2022/10/20/0020 9:24:17
  **/

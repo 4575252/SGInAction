@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 /**
  * @className: StudentDaoImpl
- * @description: TODO 类描述
  * @author: eric 4575252@gmail.com
  * @date: 2022/10/20/0020 10:44:14
  **/

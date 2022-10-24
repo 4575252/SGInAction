@@ -6,7 +6,7 @@ import org.springframework.context.annotation.*;
 
 /**
  * @className: ApplicationConfig
- * @description: TODO 类描述
+ * @description: 测试spring采用注解配置
  * @author: eric 4575252@gmail.com
  * @date: 2022/10/20/0020 12:27:46
  **/

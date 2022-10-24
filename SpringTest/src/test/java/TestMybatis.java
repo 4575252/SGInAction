@@ -11,7 +11,7 @@ import java.io.InputStream;
 
 /**
  * @className: TestMybatis
- * @description: TODO 类描述
+ * @description: 测试mybatis单独使用
  * @author: eric 4575252@gmail.com
  * @date: 2022/10/20/0020 16:28:53
  **/

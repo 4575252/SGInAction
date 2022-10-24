@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * @className: GlobalExceptionHandler
- * @description: TODO 类描述
+ * @description: 全局异常捕获
  * @author: eric 4575252@gmail.com
  * @date: 2022/10/20/0020 9:46:18
  **/

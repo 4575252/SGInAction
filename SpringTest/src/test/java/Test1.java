@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * @className: Test1
- * @description: TODO 类描述
+ * @description: 测试spring集成junit
  * @author: eric 4575252@gmail.com
  * @date: 2022/10/20/0020 16:07:25
  **/
