@@ -19,6 +19,28 @@
             <result property="desc" column="desc" />
         </collection>
     </resultMap>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into user(username, age,address) values (#{username}, #{age}, #{address})
+    </insert>
+
+    <update id="update">
+        update `user`
+        <trim prefix="set" prefixOverrides=",">
+            <if test="username!=null">
+                username = #{username}
+            </if>
+            <if test="age!=null">
+                , age=#{age}
+            </if>
+            <if test="address!=null">
+                , address=#{address}
+            </if>
+        </trim>
+        where id = #{id}
+    </update>
+    <delete id="deleteById">
+        delete from `user` where id= #{id}
+    </delete>
 
     <select id="findUserAndRole" resultMap="userRoleMap">
         SELECT
@@ -47,5 +69,7 @@
     <select id="findAll" resultType="com.iyyxx.domain.User">
         select * from user
     </select>
-    <cache />
+    <select id="findByUsername" resultType="com.iyyxx.domain.User">
+        select * from user where username=#{username} limit 0,1
+    </select>
 </mapper>

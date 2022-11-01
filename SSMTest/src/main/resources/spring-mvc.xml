@@ -33,22 +33,22 @@
 <!--    </bean>-->
 
     <!-- 配置拦截器 -->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-<!--            <mvc:exclude-mapping path="/"/>-->
-            <bean class="com.iyyxx.interceptor.MyHandlerInterceptor" />
-        </mvc:interceptor>
-    </mvc:interceptors>
+<!--    <mvc:interceptors>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/**"/>-->
+<!--&lt;!&ndash;            <mvc:exclude-mapping path="/"/>&ndash;&gt;-->
+<!--            <bean class="com.iyyxx.interceptor.MyHandlerInterceptor" />-->
+<!--        </mvc:interceptor>-->
+<!--    </mvc:interceptors>-->
 
     <!--
         文件上传解析器
         注意：id必须为 multipartResolver
         如果需要上传文件可以放开相应配置
     -->
-<!--    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">-->
-<!--        <property name="defaultEncoding" value="utf-8" />-->
-<!--        <property name="maxUploadSize" value="#{1024*1024*100}" /> &lt;!&ndash; 总的大小上限，单位字节 &ndash;&gt;-->
-<!--        <property name="maxUploadSizePerFile" value="#{1024*1024*50}" /> &lt;!&ndash; 单个文件上限50MB &ndash;&gt;-->
-<!--    </bean>-->
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="maxUploadSize" value="#{1024*1024*100}" /> <!-- 总的大小上限，单位字节 -->
+        <property name="maxUploadSizePerFile" value="#{1024*1024*50}" /> <!-- 单个文件上限50MB -->
+    </bean>
 </beans>

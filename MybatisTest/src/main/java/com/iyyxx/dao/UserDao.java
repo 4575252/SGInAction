@@ -2,7 +2,6 @@ package com.iyyxx.dao;
 
 
 import com.iyyxx.domain.User;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -18,4 +17,10 @@ public interface UserDao {
     User findUserAndRole(int id);
 
     User findByUserName(String username);
+
+    int insert(User user);
+    int update(User user);
+    User findByUsername(String username);
+    int deleteById(Integer id);
+
 }
